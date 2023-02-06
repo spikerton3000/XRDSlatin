@@ -7,14 +7,50 @@
     <title>XRDS Latin</title>
 </head>
 <body>
-    <div class="nav">
-        <ul>
-            <a href="" class="navLinkActive">Home</a>
-            <a href="" class="navLinkInactive">Teachers</a>
-            <a href="" class="navLinkInactive">Events</a>
-        </ul>
-    </div>
-
-    <p>hello world!</p>
+    <!--NavBar-->
+    <ul class="nav">
+        <li><a href="" class="Active">Home</a></li>
+        <li><a href="">Teachers</a></li>
+        <li><a href="">Events</a></li>
+    </ul>
 </body>
 </html>
+
+<!--Fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+
+<!--Style-->
+<style>
+    .nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        border-radius: 10px;
+
+    }
+
+    .nav li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Poppins', 'wght@200';
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+
+    .Active {
+        background-color: gray;
+    }
+</style>
