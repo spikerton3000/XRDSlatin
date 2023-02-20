@@ -5,20 +5,143 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+
     <!--NavBar-->
     <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="teachers.html" class="Active">Teachers</a></li>
         <li><a href="">Events</a></li>
     </ul>
-    <p>hello</p>
+</head>
+<body>
+
+    <!--Content-->
+    <ul class="Teachers">
+        <!--Marisa-->
+        <li>
+            <h2 class="TeacherName">Marisa Alimento<span class="material-symbols-outlined" id="marisaPlus">add</span><span class="material-symbols-outlined" id="marisaMinus">remove</span></h4>
+
+            <div id="marisaInfo">
+                <p>
+                    Marisa was born in Naha Okinawa, Japan.
+                    Her favorite latin stories are the stories of the legendary kings of rome, especially the writings of Livy.
+                    Her favorite place in Rome is the 101 Flavor Gelato Shop near piazza navoa, and
+                    her favorite ancient roman ruin is the Collosseum.
+                </p>
+            </div>
+        </li>
+
+        <!--Allison-->
+        <li>
+            <h2 class="TeacherName">Allison Wedding<span class="material-symbols-outlined" id="allisonPlus">add</span><span class="material-symbols-outlined" id="allisonMinus">remove</span></h4>
+
+            <div id="allisonInfo">
+                <p>
+                    Allision was born in Santa Clarita, California.
+                    Her favorite latin stores are the stories about heroes.
+                    Her favorite place in Rome is the Collosseum, and her favorite Roman ruin is Pompeii.
+                </p>
+            </div>
+        </li>
+
+        <!--Moc Le-->
+        <li>
+            <h2 class="TeacherName">Moc Le Nguyen<span class="material-symbols-outlined" id="mocLePlus">add</span><span class="material-symbols-outlined" id="mocLeMinus">remove</span></h4>
+
+            <div id="mocLeInfo">
+                <p>
+                    Allision was born in Santa Clarita, California.
+                    Her favorite latin stores are the stories about heroes.
+                    Her favorite place in Rome is the Collosseum, and her favorite Roman ruin is Pompeii.
+                </p>
+            </div>
+        </li>
+    </ul>
 </body>
 </html>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 <link rel="stylesheet" href="style.css">
+
+<script>
+    //Marisa
+    $( document ).ready(() => {
+        $("#marisaMinus").hide();
+
+        $("#marisaInfo").hide();
+    });
+
+    $("#marisaPlus").click(() => {
+        $("#marisaInfo").show();
+
+        $("#marisaInfo").toggleClass("On")
+        $("#marisaPlus").hide();
+        $("#marisaMinus").show();
+    })
+
+    $("#marisaMinus").click(() => {
+        $("#marisaInfo").toggleClass("On")
+        setTimeout(() => {
+            $("#marisaInfo").hide();
+        }, 250);
+
+        $("#marisaMinus").hide();
+        $("#marisaPlus").show();
+    })
+
+    //Allison
+    $( document ).ready(() => {
+        $("#allisonMinus").hide();
+
+        $("#allisonInfo").hide();
+    });
+
+    $("#allisonPlus").click(() => {
+        $("#allisonInfo").show();
+
+        $("#allisonInfo").toggleClass("On")
+        $("#allisonPlus").hide();
+        $("#allisonMinus").show();
+    })
+
+    $("#allisonMinus").click(() => {
+        $("#allisonInfo").toggleClass("On")
+        setTimeout(() => {
+            $("#allisonInfo").hide();
+        }, 250);
+
+        $("#allisonMinus").hide();
+        $("#allisonPlus").show();
+    })
+
+    //Moc Le
+    $( document ).ready(() => {
+        $("#mocLeMinus").hide();
+
+        $("#mocLeInfo").hide();
+    });
+
+    $("#mocLePlus").click(() => {
+        $("#mocLeInfo").show();
+
+        $("#mocLeInfo").toggleClass("On")
+        $("#mocLePlus").hide();
+        $("#mocLeMinus").show();
+    })
+
+    $("#mocLeMinus").click(() => {
+        $("#mocLeInfo").toggleClass("On")
+        setTimeout(() => {
+            $("#mocLeInfo").hide();
+        }, 250);
+
+        $("#mocLeMinus").hide();
+        $("#mocLePlus").show();
+    })
+</script>
