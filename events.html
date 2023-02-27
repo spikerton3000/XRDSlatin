@@ -78,7 +78,11 @@
     let activeImg = 0;
 
     $("#SCRAMLeftArrow").click(() => {
-        activeImg++;
+        if (imgs.length - 1 != activeImg) {
+            activeImg++;
+        } else {
+            activeImg = 0;
+        }
         document.getElementById("SCRAMSlideshow").src = imgs[activeImg];
     })
 </script>
