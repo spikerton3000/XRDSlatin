@@ -28,7 +28,7 @@ li a:not(.Active):hover {
     background-color: gray;
 }
 
-.Teachers {
+.Teachers, .Events {
     font-family: 'Poppins', 'wght@200';
     list-style-type: none;
     padding: 0;
@@ -44,17 +44,17 @@ li a:not(.Active):hover {
     cursor: pointer;
 }
 
-#marisaInfo, #allisonInfo, #mocLeInfo {
+#marisaInfo, #allisonInfo, #mocLeInfo, #SCRAMInfo {
     opacity: 0;
     transition: all .5s ease;
 }
 
-#marisaInfo.On, #allisonInfo.On, #mocLeInfo.On {
+#marisaInfo.On, #allisonInfo.On, #mocLeInfo.On, #SCRAMInfo.On {
     opacity: 1;
 }
 
 Body {
-    color: #B7C0A4;
+    color: #B7C0A4; 
 }
 
 html {
@@ -66,10 +66,34 @@ html {
     text-decoration: none;
 
     box-shadow: inset 0 0 0 0 #677E70;
-    transition: color .3s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .1s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .Link:hover {
     box-shadow: inset 100px 0 0 0 #677E70;
     color: #c9b2c0;
+}
+
+.SlideshowImage {
+    height: 40rem;
+    position: relative;
+}
+
+.SlideshowLeftArrow {
+    position: absolute;
+    bottom: 45%;
+    left: 3%;
+    color:#173841;
+}
+
+.SlideshowRightArrow {
+    position: absolute;
+    bottom: 45%;
+    left: 90%;
+    color:#173841;
+}
+
+.SlideshowContainer {
+    position: relative;
+    display: inline-block;
 }

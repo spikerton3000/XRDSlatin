@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!--Navbar-->
+    <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="events.html" class="Active">Events</a></li>
+    </ul>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <ul class="Events">
+        <!--SCRAM-->
+        <li>
+            <h2 class="EventName">SCRAM<span class="material-symbols-outlined" id="SCRAMPlus">add</span><span class="material-symbols-outlined" id="SCRAMMinus">remove</span></h4>
+
+            <div id="SCRAMInfo" class="SlideshowContainer">
+                <img src="images/SCRAM/IMG_0020.png" alt="SCRAM Image 1" id="SCRAMSlideshow" class="SlideshowImage">
+
+                <div class="SlideshowLeftArrow" id="SCRAMLeftArrow">
+                    <i class="fa-solid fa-caret-left fa-6x"></i>
+                </div>
+
+                <div class="SlideshowRightArrow" id="SCRAMRightArrow">
+                    <i class="fa-solid fa-caret-right fa-6x"></i>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</body>
+</html>
+
+<script>
+    //SCRAM
+    $( document ).ready(() => {
+        $("#SCRAMMinus").hide();
+
+        $("#SCRAMInfo").hide();
+    });
+
+    $("#SCRAMPlus").click(() => {
+        $("#SCRAMInfo").show();
+
+        $("#SCRAMInfo").toggleClass("On")
+        $("#SCRAMPlus").hide();
+        $("#SCRAMMinus").show();
+    });
+
+    $("#SCRAMMinus").click(() => {
+        $("#SCRAMInfo").toggleClass("On")
+        setTimeout(() => {
+            $("#SCRAMInfo").hide();
+        }, 250);
+
+        $("#SCRAMMinus").hide();
+        $("#SCRAMPlus").show();
+    });
+
+    const imgs = ["IMG_0020.PNG", "IMG_0056 (1).PNG", "IMG_0060 (2).PNG", "IMG_0096.PNG", "IMG_0097.PNG", "IMG_0099.PNG"];
+    let activeImg = 0;
+
+    $("#SCRAMLeftArrow").click(() => {
+        activeImg++;
+        document.getElementById("SCRAMSlideshow").src = imgs[activeImg];
+    })
+</script>
